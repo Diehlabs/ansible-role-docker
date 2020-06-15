@@ -1,2 +1,7 @@
 ---
-# tasks file for docker
+---
+ - include: Debian.yml
+   when: ansible_os_family == 'Debian'
+
+ - include: Darwin.yml
+   when: ansible_os_family == 'Darwin'
