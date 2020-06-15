@@ -41,3 +41,4 @@
   apt:
     name: docker-compose
     state: present
+  when: "install_compose == true"

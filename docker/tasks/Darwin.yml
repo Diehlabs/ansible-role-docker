@@ -12,3 +12,4 @@
 - name: Install docker-compose for Python
   pip:
     name: docker-compose
+  when: "install_compose == true"
