@@ -49,4 +49,4 @@
     groups: docker
     append: yes
   loop: "{{ docker_group_members }}"
-  when: docker_group_members | length > 0
+  when: docker_group_members | length>0
