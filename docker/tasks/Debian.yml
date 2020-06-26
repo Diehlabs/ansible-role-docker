@@ -43,5 +43,5 @@
     state: present
   when: "install_compose == true"
 
-- include: docker-users.yml
+- include: docker_group_members.yml
   when: docker_group_members | length>0
