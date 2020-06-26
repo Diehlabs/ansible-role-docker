@@ -43,10 +43,5 @@
     state: present
   when: "install_compose == true"
 
-- name: Add users to docker group
-  user:
-    name: "{{ item }}"
-    groups: docker
-    append: yes
-  loop: "{{ docker_group_members }}"
+- include: docker-users.yml
   when: docker_group_members | length>0
