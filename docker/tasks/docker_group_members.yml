@@ -4,5 +4,5 @@
     name: "{{ item }}"
     groups: docker
     append: yes
-  #loop: "{{ docker_group_members }}"
-  loop: "{{ lookup('dict', docker_group_members, wantlist=True) }}"
+  loop: "{{ docker_group_members }}"
+  #loop: "{{ lookup('dict', docker_group_members, wantlist=True) }}"
