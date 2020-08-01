@@ -4,6 +4,11 @@
     name: [ "docker", "docker-compose" ]
     state: "present"
 
+- name: Installing Homebrew Cask Packages (Docker)
+  homebrew_cask:
+    name: [ "docker" ]
+    state: present
+
 # Required for Ansible to perform docker tasks like run containers
 - name: Install Docker SDK for Python
   pip:
