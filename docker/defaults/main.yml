@@ -1,4 +1,4 @@
 ---
 install_compose: true
 docker_group_members:
-docker_package:
+docker_package: docker-ce
