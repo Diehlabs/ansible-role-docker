@@ -1,4 +1,4 @@
-Role Name
+ansible-role-docker
 =========
 
 A brief description of the role goes here.
