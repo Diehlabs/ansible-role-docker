@@ -1,4 +1,4 @@
-ansible-role-docker
+ansible-role-docker [![Ansible Lint](https://github.com/CultClassik/ansible-role-docker/actions/workflows/Ansible%20Lint.yml/badge.svg)](https://github.com/CultClassik/ansible-role-docker/actions/workflows/Ansible%20Lint.yml)
 =========
 
 A brief description of the role goes here.
