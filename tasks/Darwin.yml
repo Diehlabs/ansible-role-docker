@@ -4,12 +4,6 @@
     name: [ "docker" ]
     state: present
 
-# Required for Ansible to perform docker tasks like run containers
-- name: Install Docker SDK for Python
-  pip:
-    name: docker
-    executable: "{{ docker_pip_executable }}"
-
 # compose is built in to newer versions of docker
 # - name: Install docker-compose for Python
 #   pip:

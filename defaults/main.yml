@@ -1,4 +1,4 @@
 ---
 docker_group_members:
 docker_package: docker-ce
-docker_pip_executable: pip3
+docker_pip_executable: /usr/local/bin/pip3
