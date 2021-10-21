@@ -13,4 +13,3 @@
       - docker
       - docker-compose
     executable: "{{ docker_pip_executable }}"
-      
