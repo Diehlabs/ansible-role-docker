@@ -9,7 +9,7 @@
 - name: Install Docker SDK for Python
   pip:
     name:
-      = setuptools_rust
+      - setuptools_rust
       - docker
       - docker-compose
     executable: "{{ docker_pip_executable }}"
