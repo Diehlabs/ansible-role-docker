@@ -1,0 +1,24 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: Add the user needed to test role with defaults
+      ansible.builtin.user:
+        name: "{{ item }}"
+      loop:
+        - chris
+        - joe
+
+    - name: Install gpg-agent
+      ansible.builtin.apt:
+        update_cache: yes
+        name: gpg-agent
+
+    - name: "Include docker"
+      include_role:
+        name: "docker"
+      vars:
+        docker_group_members:
+          - chris
+          - joe
+        docker_pip_executable: /usr/bin/pip
