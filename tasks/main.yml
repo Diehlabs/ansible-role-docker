@@ -1,8 +1,8 @@
 ---
-- include: Debian.yml
+- include_tasks: Debian.yml
   when: ansible_os_family == 'Debian'
 
-- include: Darwin.yml
+- include_tasks: Darwin.yml
   when: ansible_os_family == 'Darwin'
 
 # Required for Ansible to perform docker tasks like run containers
