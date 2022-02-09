@@ -1,4 +1,4 @@
-ansible-role-docker [![Ansible Lint](https://github.com/Diehlabs/ansible-role-docker/actions/workflows/test.yml/badge.svg)](https://github.com/Diehlabs/ansible-role-docker/actions/workflows/test.yml)
+ansible-role-docker [![Ansible CI](https://github.com/Diehlabs/ansible-role-docker/actions/workflows/ci.yml/badge.svg)](https://github.com/Diehlabs/ansible-role-docker/actions/workflows/ci.yml)
 =========
 
 A brief description of the role goes here.
