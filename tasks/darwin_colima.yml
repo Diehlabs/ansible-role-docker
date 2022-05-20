@@ -1,0 +1,11 @@
+---
+- name: Installing Homebrew Cask Packages (Docker)
+  homebrew:
+    name:
+    - colima
+    - docker
+    - docker-compose
+    state: present
+
+
+  

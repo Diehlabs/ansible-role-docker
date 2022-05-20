@@ -2,12 +2,15 @@
 - include_tasks: Debian.yml
   when: ansible_os_family == 'Debian'
 
-- include_tasks: Darwin.yml
-  when: ansible_os_family == 'Darwin'
+- include_tasks: darwin_docker.yml
+  when: ansible_os_family == 'Darwin' and docker_desktop == 'docker'
+
+- include_tasks: darwin_colima.yml
+  when: ansible_os_family == 'Darwin' and docker_desktop == 'colima'
 
 # Required for Ansible to perform docker tasks like run containers
 - name: Install Docker SDK for Python
-  pip:
+  ansible.builtin.pip:
     name:
       - setuptools_rust
       - docker

@@ -11,7 +11,12 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+| Name | Description | Default |
+|---|---|---|
+| docker_group_members | User accounts to add to docker group. | n/a  |
+| docker_package | Only evaluated on Linux. | docker-ce |
+| docker_pip_executable | Path to pip which Ansible should sued | /usr/local/bin/pip3 |
+| docker_desktop | Only evaluated on MacOS. Use `colima` or `docker` | colima |
 
 Dependencies
 ------------
