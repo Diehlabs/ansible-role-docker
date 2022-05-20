@@ -1,1 +1,5 @@
 ---
+docker_user_gid_by_os:
+  Darwin: admin
+  Linux: "{{ docker_user_id }}"
+  Windows: Users

@@ -1,5 +1,5 @@
 ---
 - name: Installing Homebrew Cask Packages (Docker)
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: [ "docker" ]
     state: present

@@ -22,7 +22,7 @@
     state: present
 
 - name: Update apt and install docker & compose
-  apt:
+  ansible.builtin.apt:
     update_cache: true
     state: present
     name:
@@ -30,7 +30,7 @@
       - docker-compose
 
 - name: Add users to docker group
-  user:
+  ansible.builtin.user:
     name: "{{ item }}"
     groups: docker
     append: yes

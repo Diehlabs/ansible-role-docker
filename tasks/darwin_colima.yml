@@ -1,11 +1,27 @@
 ---
 - name: Installing Homebrew Cask Packages (Docker)
-  homebrew:
+  community.general.homebrew:
     name:
     - colima
     - docker
     - docker-compose
     state: present
 
+- name: Configure docker-compose as Docker plugin
+  ansible.builtin.file:
+    state: directory
+    path: ~/.docker/cli-plugins
+    mode: u=rwx,g=rx
+    owner: "{{ docker_user_id }}"
+    group: "{{ docker_group_id }}"
 
-  
+- name: Symlink docker-compose
+  ansible.builtin.file:
+    state: link
+    force: yes
+    src: $(brew --prefix)/opt/docker-compose/bin/docker-compose
+    path: ~/.docker/cli-plugins/docker-compose
+    mode: u=rwx,g=rx
+    owner: "{{ docker_user_id }}"
+    group: "{{ docker_group_id }}"
+    # ln -sfn  ~/.docker/cli-plugins/docker-compose

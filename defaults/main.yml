@@ -1,4 +1,6 @@
 ---
+docker_user_id:
+docker_group_id: "{{ docker_user_gid_by_os[ansible_system] }}"
 docker_group_members:
 docker_package: docker-ce
 docker_pip_executable: /usr/local/bin/pip3
