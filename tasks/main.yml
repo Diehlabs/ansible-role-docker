@@ -1,11 +1,14 @@
 ---
-- include_tasks: Debian.yml
+- name: Linux (Debian) Tasks
+  ansible.builtin.include_tasks: Debian.yml
   when: ansible_os_family == 'Debian'
 
-- include_tasks: darwin_docker.yml
+- name: OSX (Docker Desktop) tasks
+  ansible.builtin.include_tasks: darwin_docker.yml
   when: ansible_os_family == 'Darwin' and docker_desktop_osx == 'docker'
 
-- include_tasks: darwin_colima.yml
+- name: OSX (Colima) Tasks
+  ansible.builtin.include_tasks: darwin_colima.yml
   when: ansible_os_family == 'Darwin' and docker_desktop_osx == 'colima'
 
 # Required for Ansible to perform docker tasks like run containers
