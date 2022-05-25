@@ -2,10 +2,9 @@ galaxy_info:
   author: Chris Diehl
   description: Installs and configures Docker
   company: Diehlabs
-  role_name: docker
-  namespace: diehlabs
-
   license: MIT
+  namespace: diehlabs
+  role_name: docker
 
   min_ansible_version: '2.9'
 
