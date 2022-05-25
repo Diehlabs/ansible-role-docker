@@ -15,7 +15,7 @@
         name: gpg-agent
 
     - name: "Include docker"
-      include_role:
+      ansible.builtin.include_role:
         name: "docker"
       vars:
         docker_group_members:

@@ -1,5 +1,10 @@
 ---
-- name: Installing Homebrew Cask Packages (Docker)
+- name: Uninstall Docker Homebrew Cask
+  community.general.homebrew_cask:
+    name: [ "docker" ]
+    state: absent
+
+- name: Install Homebrew Packages for Colima
   community.general.homebrew:
     name:
     - colima

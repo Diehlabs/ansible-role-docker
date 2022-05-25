@@ -1,5 +1,24 @@
 ---
-- name: Installing Homebrew Cask Packages (Docker)
+- name: Uninstall Homebrew Packages (Docker)
+  community.general.homebrew:
+    name:
+    - colima
+    - docker
+    - docker-compose
+    state: absent
+
+- name: Configure docker-compose as Docker plugin
+  ansible.builtin.file:
+    state: absent
+    path: ~/.docker/cli-plugins
+
+- name: Symlink docker-compose
+  ansible.builtin.file:
+    state: absent
+    src: $(brew --prefix)/opt/docker-compose/bin/docker-compose
+    path: ~/.docker/cli-plugins/docker-compose
+
+- name: Install Homebrew Cask Packages (Docker)
   community.general.homebrew_cask:
     name: [ "docker" ]
     state: present

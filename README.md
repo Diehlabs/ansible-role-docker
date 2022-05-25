@@ -16,7 +16,7 @@ Role Variables
 | docker_group_members | User accounts to add to docker group. | n/a  |
 | docker_package | Only evaluated on Linux. | docker-ce |
 | docker_pip_executable | Path to pip which Ansible should sued | /usr/local/bin/pip3 |
-| docker_desktop | Only evaluated on MacOS. Use `colima` or `docker` | colima |
+| docker_desktop_osx | Only evaluated on MacOS. Use `colima` or `docker` | colima |
 
 Dependencies
 ------------
