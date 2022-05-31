@@ -3,8 +3,8 @@ galaxy_info:
   description: Installs and configures Docker
   company: Diehlabs
   license: MIT
-  # namespace: diehlabs
-  role_name: ansible-role-docker
+  namespace: diehlabs
+  # role_name: ansible-role-docker
 
   min_ansible_version: '2.9'
 
