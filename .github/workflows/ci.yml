@@ -18,14 +18,14 @@ jobs:
   default:
     uses: Diehlabs/shared-workflows/.github/workflows/ansible-ci.yml@develop
     with:
-      ansible_version: ${{env.VER_ANSIBLE}}
-      ansible_lint_version: ${{env.VER_ANSIBLE_LINT}}
-      molecule_version: ${{env.VER_MOLECULE_VERSION}}
+      ansible_version: ${ {env.VER_ANSIBLE }}
+      ansible_lint_version: ${{ env.VER_ANSIBLE_LINT }}
+      molecule_version: ${{ env.VER_MOLECULE_VERSION }}
 
   all_vars:
     uses: Diehlabs/shared-workflows/.github/workflows/ansible-ci.yml@develop
     with:
       scenario: more_vars
-      ansible_version: ${{env.VER_ANSIBLE}}
-      ansible_lint_version: ${{env.VER_ANSIBLE_LINT}}
-      molecule_version: ${{env.VER_MOLECULE_VERSION}}
+      ansible_version: ${ {env.VER_ANSIBLE }}
+      ansible_lint_version: ${{ env.VER_ANSIBLE_LINT }}
+      molecule_version: ${{ env.VER_MOLECULE_VERSION }}
