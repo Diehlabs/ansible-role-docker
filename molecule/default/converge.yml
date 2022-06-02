@@ -16,7 +16,7 @@
 
     - name: "Include docker"
       ansible.builtin.include_role:
-        name: diehlabs_docker
+        name: docker
       vars:
         docker_group_members:
           - chris
