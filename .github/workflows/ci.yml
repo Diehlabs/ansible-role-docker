@@ -11,16 +11,9 @@ on:
 
 jobs:
   default:
-    uses: Diehlabs/shared-workflows/.github/workflows/ansible-ci.yml@develop
-    with:
-      ansible_version: '5.2.0'
-      ansible_lint_version: '5.3.2'
-      molecule_version: '3.5.2'
+    uses: Diehlabs/shared-workflows/.github/workflows/ansible-ci.yml@v0.1.0
 
   all_vars:
-    uses: Diehlabs/shared-workflows/.github/workflows/ansible-ci.yml@develop
+    uses: Diehlabs/shared-workflows/.github/workflows/ansible-ci.yml@v0.1.0
     with:
       scenario: more_vars
-      ansible_version: '5.2.0'
-      ansible_lint_version: '5.3.2'
-      molecule_version: '3.5.2'
