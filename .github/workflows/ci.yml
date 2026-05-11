@@ -1,18 +1,12 @@
-name: Ansible CI
+name: CI
 
 on:
   push:
-    paths-ignore:
-      - '**.md'
+    branches: [main]
   pull_request:
-    paths-ignore:
-      - '**.md'
 
 jobs:
-  default:
-    uses: Diehlabs/shared-workflows/.github/workflows/ansible-ci.yml@v0.0.3
-
-  all_vars:
-    uses: Diehlabs/shared-workflows/.github/workflows/ansible-ci.yml@v0.0.3
-    with:
-      scenario: all_vars
+  call-workflow:
+    uses: YOUR_ORG/devops-templates/.github/workflows/ansible-standard.yml@main
+    secrets:
+      GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
