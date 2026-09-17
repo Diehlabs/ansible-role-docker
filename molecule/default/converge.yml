@@ -16,7 +16,7 @@
 
     - name: "Include docker"
       include_role:
-        name: "docker"
+        name: "ansible-role-docker"
       vars:
         docker_group_members:
           - chris
